@@ -42,7 +42,7 @@ button:hover {
   cursor: pointer;
   border: solid rgb(228, 223, 233) 3px;
   border-radius: 10px 10px 0 0;
-  line-height: 35px;
+  line-height: 37px;
   width: 20%;
   color: black;
   font-size: 18px;
@@ -57,7 +57,7 @@ input:checked+.tab {
 /* ▼タブにマウスポインタが載った際の装飾 */
 .tab:hover {
   background-color: rgb(212, 241, 243);
-  height: 34px;
+  height: 35px;
 }
 
 .tabcontent {
