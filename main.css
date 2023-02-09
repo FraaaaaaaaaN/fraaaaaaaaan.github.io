@@ -57,7 +57,7 @@ input:checked+.tab {
 /* ▼タブにマウスポインタが載った際の装飾 */
 .tab:hover {
   background-color: rgb(212, 241, 243);
-  height: 35px;
+  height: 37px;
 }
 
 .tabcontent {
