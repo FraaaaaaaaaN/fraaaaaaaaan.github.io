@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css?family=Kaisei+Decol');
+
+body {
+  background-color: rgb(228, 223, 233);
+  margin: 0;
+  font-family: 'Kaisei Decol', serif;
+  /* フォントの種類指定 */
+}
+
+main {
+  background-color: white;
+  height: 145px;
+  text-align: center;
+}
+
+.logo {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 80px;
+  width: auto;
+}
+
+button {
+  background-color: rgb(255, 255, 255);
+  border: solid rgb(228, 223, 233) 3px;
+  border-radius: 10px 10px 0 0;
+  height: 40px;
+  width: 20%;
+  margin: 0 3px;
+}
+
+button:hover {
+  background-color: rgb(228, 223, 233);
+}
+
+.main input {
+  display: none;
+}
+
+.tab {
+  display: inline-block;
+  cursor: pointer;
+  border: solid rgb(228, 223, 233) 3px;
+  border-radius: 10px 10px 0 0;
+  line-height: 35px;
+  width: 20%;
+  color: black;
+  font-size: 18px;
+  background-color: white;
+}
+
+/* ▼選択状態のタブ(＝チェックが入っているラジオボタンの隣にあるタブの装飾) */
+input:checked+.tab {
+  background-color: rgb(228, 223, 233);
+}
+
+/* ▼タブにマウスポインタが載った際の装飾 */
+.tab:hover {
+  background-color: rgb(212, 241, 243);
+  height: 34px;
+}
+
+.tabcontent {
+  display: none;
+  /* 標準では非表示にする */
+  padding-top: 80px;
+  margin: auto;
+}
+
+/* ▼チェックが入っているラジオボタンに対応するタブの中身を表示する */
+#profile:checked~#profile {
+  display: block;
+}
+
+#creation:checked~#creation {
+  display: block;
+}
+
+#contact:checked~#contact {
+  display: block;
+}
+
+.profileImage {
+  border-radius: 30px;
+  height: 400px;
+  width: auto;
+  text-align: center;
+  pointer-events: none;
+}
+
+.name {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.center {
+  display: inline-block;
+  margin: auto;
+}
+
+.imageArea,
+.profileArea {
+  float: left;
+  margin: 0 20px;
+}
+
+.profileArea {
+  text-align: left;
+}
+
+.creationImage {
+  float: left;
+  margin: 0px 0px 15px 0px;
+}
+
+.creationImageSize {
+  object-fit: cover;
+}
+
+.creationImageUp {
+  text-align: center;
+  height: auto;
+  width: 60%;
+}
+
+.image {
+  height: 200px;
+  width: 200px;
+  border-radius: 30px;
+}
+
+.modal_wrap input {
+  display: none;
+}
+
+.modal_overlay {
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.5s, transform 0s 0.5s;
+  transform: scale(0);
+}
+
+.modal_trigger {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.modal_content {
+  align-self: center;
+  width: 60%;
+  max-width: 800px;
+  padding: 30px 30px 15px;
+  box-sizing: border-box;
+  background: #f1f1f186;
+  line-height: 1.4em;
+  transform: scale(0.3);
+  transition: 0.5s;
+}
+
+.close_button {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal_wrap input:checked~.modal_overlay {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.5s;
+}
+
+.modal_wrap input:checked~.modal_overlay .modal_content {
+  transform: scale(1);
+}
+
+.open_button {
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 8px 16px;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+}
+
+.open_button:hover {
+  opacity: 0.5;
+}
+
+.contactTable {
+  border-color: white;
+}
+
+th {
+  padding: 20px 20px;
+}
+
+td{
+  padding: 20px 20px 20px 10px;
+}
+
+td {
+  text-align: left;
+}
